@@ -20,7 +20,7 @@ public class CepResponseDto {
     private String codigo;
     private String mensagem;
 
-    public CepResponseDto(String codigo, String mensagem){
+    public CepResponseDto(String codigo, String mensagem) {
         this.codigo = codigo;
         this.mensagem = mensagem;
     }

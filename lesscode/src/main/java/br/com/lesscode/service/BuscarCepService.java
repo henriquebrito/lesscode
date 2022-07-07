@@ -9,7 +9,7 @@ import org.springframework.web.client.RestTemplate;
 @Service
 public class BuscarCepService {
 
-    @Value("${api-consumo}")
+    @Value("${api-consumo-cep}")
     private String url;
 
     @Autowired
@@ -17,7 +17,7 @@ public class BuscarCepService {
 
     public CepResponseDto getCep(String cep) {
         try {
-            return restTemplate.getForObject(url+"/"+cep+"/json/", CepResponseDto.class);
+            return restTemplate.getForObject(url + "/" + cep + "/json/", CepResponseDto.class);
 
         } catch (Exception exception) {
             return new CepResponseDto("400", exception.toString());
